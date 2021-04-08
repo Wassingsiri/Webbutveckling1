@@ -18,6 +18,10 @@ body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+main {
+  margin: 0 100px;
+}
+
 /* || Header och Navigation */
 
 nav.navbar {
@@ -31,6 +35,10 @@ nav.navbar {
 
 h1.header-h1 {
   font-size: 45px; /*Gör om till rem pga TILLGÄNGLIGHET*/
+}
+.header-h1 > a{
+text-decoration: none;
+color: black;
 }
 
 .align-center .icon-slogan {
@@ -93,12 +101,27 @@ li a:hover {
 
 /* ====== SIDA 1, HEM /indexprojekt====== */
 
+.flex-row{
+  display: flex; 
+ justify-content: center; /*positionerar knapp med flex box */
+ margin-top: 20px;
+}
+
 .mailto-box {
   border: green;
   background-color: rgb(186, 207, 154);
   width: 100px;
-  list-style-type: none;
-  justify-content: center;
+  height: 50px;
+  display: flex; /**/
+  align-items:center;
+  justify-content: center;/*positionerar text med flex box */
+
+  
+}
+
+.mailto-box > a{
+  text-decoration: none;
+  color: black;
 }
 .flex-container {
   display: flex; /*För att få dem bredvid varandra*/
@@ -113,6 +136,8 @@ li a:hover {
 .grid-image {
   width: 100%;
   height: auto;
+  padding: 0px 20px 40px 20px;
+
 }
 
 /*  Dessa två nedan blir samma för alla sidor då jag vill ha h2 och p i samma storlek. */
@@ -192,3 +217,25 @@ footer {
   margin-top: 30px;
   margin-bottom: none;
 }
+
+.left {
+flex: 1;
+margin-right: 20px;
+}
+.right {
+flex: 1;
+}
+
+.container{
+display:flex;
+flex-wrap: wrap;
+}
+
+.col2 {
+  display: flex;
+  flex-basis: 50%;
+  border: 1px solid white;
+}
+
+
+
