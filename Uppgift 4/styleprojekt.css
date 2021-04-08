@@ -133,6 +133,9 @@ h2 .flex-container {
   nav {
     flex-direction: column;
   }
+  .flex-row .container {
+    flex-direction: column;
+  }
 }
 
 /* ===== SIDA 2, Tjänster ======*/
