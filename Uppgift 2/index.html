@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--1. Taggen <title> står för webbsidans titel och syns i fliken överst på sidan-->
+    <title>Siri wässing - Kort om mig</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding-left: 5%;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: rgb(8, 109, 67);
+      }
+
+      .margin-right {
+        margin-right: 18px;
+      }
+
+      .margin-top {
+        margin-top: 50px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 15px;
+      }
+
+      .navbar {
+        margin-bottom: 20px;
+      }
+      p {
+        line-height: 140%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!--2. Taggen<h1> til <3> står för heading och fungerar som rubriker där <h1> är huvudrubrik och de andra underrubriker-->
+      <h1 class="margin-top">Siri Wässing</h1>
+      <div class="navbar">
+        <!--4. Taggen <a> står för anchor (ankare) och tillsammans används den för att skapa länkar, inom webbplatsen
+               eller till andra webbplatser. Här har jag använt attributet href för att skapa en hyperlänk inom webbplatsen-->
+        <a href="index.html" class="margin-right">Hem</a>
+        <a href="analys.html">Analys av malmo.se</a>
+      </div>
+      <!--5. Taggen <img> står för image (bild) och attributet src står för source (källa). Med src berättas vart bilden hämtas ifrån.
+            I mitt fall talar attributet om att bilden finns i en mapp på min server -->
+      <img
+        class="siri"
+        src="Bilder/Siri.jpeg"
+        alt="Siri"
+        width="200"
+        height="250"
+      />
+    </header>
+    <hr />
+    <h2>Lite kort om mig</h2>
+    <!--3. Taggen <p> står för paragraph och är sidans brödtext. Varje ny <p> startar en ny rad.-->
+    <p>
+      Jag är uppväxt på östkusten i ett litet samhälle som heter Nävekvarn.<br />
+      Nära den strora djurparken, Kålmården.<br />
+      Hösten 2015 flyttande jag ner till Malmö då jag skulle börja studera
+      till<br />
+      <!--7. Taggen <em> står för emphasize och används för att framhäva, oftast i kursiv stil-->
+      <em>Trädgårdsingenjör</em> på Sveriges landbruksuniversitet på Alnarp.<br />
+      Om man är intresserad av invasiva arter så kanske min kandidatexampen kan
+      intressera.
+      <a href="https://stud.epsilon.slu.se/13615/">Mitt kandidatarbete</a>
+    </p>
+    <p>
+      De senaste måndarena har jag börjat intressera mig för kodning så det här
+      <!--6. Taggen <strong> används för att starkt framhäva, i de flesta fall blir det i fet stil-->
+      är en helt <strong>ny värld</strong> för mig!<br />
+      I skrivandes stund läser jag Webbutveckling 1 och sen får vi se vart det
+      slutar.
+    </p>
+    <h2>3 av mina intressen</h2>
+    <h3><em>Cykla</em></h3>
+    <p>
+      Hösten 2019 började jag cykla till jobbet, från Malmö till Lund.<br />
+      Med min gamla damcykel gick det inte fort så jag införskaffade mig en
+      snabb landsvägscykel.<br />
+      Nu går det undan och vilken känsla det är när man flyger fram!<br />
+      Förrutom att pendla med den så åker jag på utflykt med övernattning i tält
+      under somrarna.
+    </p>
+    <h3>
+      <em>Springa</em>
+    </h3>
+    <p>
+      Nu låter jag som en hurtbulle men senanste året har jag även börjat tycka
+      det är kul med löpning.<br />
+      På grund av min ansträngsningsastma och fotproblem har det varit en lång
+      uppförsbacke.<br />
+      Till hösten är målet att springa Göteborgvarnet.
+    </p>
+    <h3><em>Odla</em></h3>
+    <p>
+      Det är kanske inte så konstigt att mitt hem är fullt med växter i varje
+      hörn med tankte på tidigare utbildning.<br />
+      Balkongen min brukar också vara översvämmad av allt möjligt ätbart och
+      diverse blommor.
+    </p>
+    <img
+      class="Pakchoi"
+      src="Bilder/Pakchoi.jpeg"
+      alt="Pack choi"
+      width="200"
+      height="250"
+    />
+    <h4>Mina favoriter i odlingsbrättet</h4>
+    <!-- 9. <ul> taggen skapar en unordered list med punkter. Taggen <li> är raderna i listan.-->
+    <ul>
+      <li>Chili</li>
+      <li>Pak choi</li>
+      <li>Örter</li>
+    </ul>
+    <h2>3 av mina favoritpoddar</h2>
+    <!--8. Mellan start och sluttag <table> bildas en tabell. Taggen <th> står för table header och bildar rubrik till en cell. 
+         Taggen <tr> står för table row (ny rad) och taggen <td> står  för tabel data, alltså innehållet i varje cell-->
+    <table style="width: 50%">
+      <tr>
+        <th>Flashback Forever</th>
+        <th>En varg söker sin pod</th>
+        <th>Maratonpodden</th>
+      </tr>
+      <tr>
+        <td>Humor</td>
+        <td>Underbar kemi</td>
+        <td>Inpirerande</td>
+      </tr>
+      <tr>
+        <td>Goa dialekter</td>
+        <td>Bra spaningar</td>
+        <td>Bra gäster</td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://podtail.se/podcast/flashback-forever/">Länk</a>
+        </td>
+        <td><a href="https://play.acast.com/s/envargsokersinpod">Länk</a></td>
+        <td><a href="https://podcasts.nu/poddar/maratonpodden">Länk</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

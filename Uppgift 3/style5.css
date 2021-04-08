@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(Bilder/keith-misner-h0Vxgz5tyXA-unsplash.jpg);
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  max-width: 700px;
+  overflow: auto;
+
+  background: rgba(202, 198, 198, 0.6);
+  position: absolute;
+  margin: auto; /* Centrerar container */
+  padding: 0.5rem; /* padding */
+  left: 100px;
+  top: 20px;
+  bottom: 50px;
+  right: 50px;
+  transform: translate(-50, -50%);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  text-align: justify;
+  border: solid rgb(226, 223, 220);
+}
+.namn,
+.telefon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.uppgifter {
+  min-width: 50px;
+}
+
+.val {
+  font-size: 3rem; /* Ökar textstorleken i */
+}
+textarea {
+  height: 10rem;
+  width: 30rem;
+}

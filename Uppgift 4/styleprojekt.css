@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+
+/* || Gäller för hela sidan || */
+html {
+  box-sizing: border-box;
+}
+
+*,         /* KOMMENTERA */
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* || Header och Navigation */
+
+nav.navbar {
+  display: flex; /* Container för hela menyn*/
+  flex-direction: row;
+  justify-content: space-between; /* Det blir ingen skillnad med denna!? */
+  height: 100px; /* Höjden på headern */
+  align-items: center; /* För att få alla rubriker på samma rad */
+  padding: 0 30px; /* 30px padding till höger och vänster */
+}
+
+h1.header-h1 {
+  font-size: 45px; /*Gör om till rem pga TILLGÄNGLIGHET*/
+}
+
+.align-center .icon-slogan {
+  width: 8%;
+  margin: 10px;
+}
+
+ul.menu {
+  display: flex; /* För att få rubrikerna bredvid varandra */
+  justify-content: space-between;
+  list-style: none; /* */
+  flex: 1; /*  */
+}
+ul.menu a {
+  text-decoration: none; /* */
+  color: rgb(0, 0, 0); /* */
+}
+
+/* DET BLIR INGEN SKILLNAD OM JAG TAR BORT DENNA?!*/
+.align-center {
+  display: flex; /*För att få slogan och menyn bredvid varandra*/
+  align-items: center; /* Så att det blir lättare att justera position, marginal och padding*/
+}
+
+/*Nedan har jag satt flex: 2, till slogan då ville ha menyn mer till höger*/
+.flex-2 {
+  flex: 2; /*Tar upp 2/3*/
+}
+.flex-1 {
+  flex: 1; /*Tar upp 1/3*/
+}
+
+.dropdown-content {
+  list-style: none;
+  background-color: rosybrown;
+  position: absolute; /*lägger sig på, framför skiter i det innan, bra för responsivitet*/
+  display: none; /*Ska inte synas förens pekaren dras över*/
+  padding: 7px 7px 7px 4px; /* Skapar luft mellan kanten och texten */
+}
+
+.dropdown:hover .dropdown-content {
+  /* När man hovrar över .dropdown skall dess barn .dropdown-content bli synlig*/
+  display: block;
+}
+
+li a:hover {
+  text-decoration: underline; /* Skapar linje under vald rubrik*/
+}
+
+/* ||    Bakgrundsbild och rubrik ||   */
+
+.slogan {
+  background-image: url(./bilder/pexels-creative-vix-7283redigerad2.jpeg);
+  background-size: cover;
+  padding: 70px;
+  background-position: bottom;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/* ====== SIDA 1, HEM /indexprojekt====== */
+
+.mailto-box {
+  border: green;
+  background-color: rgb(186, 207, 154);
+  width: 100px;
+  list-style-type: none;
+  justify-content: center;
+}
+.flex-container {
+  display: flex; /*För att få dem bredvid varandra*/
+  justify-content: space-around; /*Vänster justering*/
+  margin-top: 20px; /* Luft mellan olika content */
+}
+.content-box {
+  flex: 1; /* Boxarna tar upp lika mycket plats */
+  padding: 30px; /* Skapa luft emellan boxarna */
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+}
+
+/*  Dessa två nedan blir samma för alla sidor då jag vill ha h2 och p i samma storlek. */
+p .flex-container {
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h2 .flex-container {
+  font-size: 30px;
+}
+
+/* ===== För responsivitet ==== */
+
+@media all and (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+  }
+}
+
+/* ===== SIDA 2, Tjänster ======*/
+.flex-container .flex-4 {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.content-box1 {
+  flex: 1;
+  padding: 30px;
+}
+
+.bild1 {
+  width: 100%;
+  height: auto;
+}
+
+.content-box1 h2,
+p,
+.bild1 {
+  background: beige;
+}
+
+/* ===== SIDA 3, rådgivning======*/
+
+.flex-container-1 {
+  display: flex;
+}
+.flex-column .grid-image {
+  flex-basis: 50px;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: row;
+}
+
+.flex-column .text-section {
+  flex: 1;
+}
+
+/* ===== SIDA 4 ======*/
+
+/* ===== SIDA 5 ======*/
+
+/* ===== SIDA 6 ======*/
+
+/* ===== Footer, samma på alla sidor ====*/
+
+footer {
+  background-color: rgb(189, 165, 165);
+  background-size: 100%;
+  height: 90px;
+  margin-top: 30px;
+  margin-bottom: none;
+}

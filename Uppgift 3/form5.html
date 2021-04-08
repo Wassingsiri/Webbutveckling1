@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .etikett {
+        display: block; /* Skapar radbrytning efter etikett */
+        margin-top: 1.5rem; /* Mellanrum ovanför etikett */
+      }
+
+      .knappar {
+        clear: both; /* Säkerställer att knapparna hamnar på ny rad */
+        margin-top: 1.5rem; /* Mellanrum ovanför etikett */
+      }
+    </style>
+    <title>Uppgift 3b - Formulär</title>
+  </head>
+
+  <body>
+    <h1>Supportformulär</h1>
+    <p>Här kan du skicka ett ärende till vår supportavdelning.</p>
+    <form
+      action="http://staff.www.ltu.se/~susfah/VT19/parse_form.php"
+      method="POST"
+    >
+      <!-- NAMN -->
+      <label class="etikett" for="namn">Ditt namn:</label>
+      <input id="namn" type="text" name="namn" />
+
+      <!-- TELEFON -->
+      <label class="etikett" for="telefon">Telefon:</label>
+      <input id="telefon" type="text" name="telefon" />
+
+      <!-- PRIORITET -->
+      <label class="etikett" for="prioritet">Prioritet:</label>
+      <select id="prioritet" name="prioritet">
+        <option value="1">Låg</option>
+        <option value="2">Normal</option>
+        <option value="3">Hög</option>
+      </select>
+
+      <!-- ORT -->
+      <label class="etikett" id="ort">Tilldela ort:</label>
+      <div>
+        <input id="ort-gbg" type="radio" name="ort" value="gbg" checked />
+        <label for="ort-gbg">Göteborg</label>
+      </div>
+      <div>
+        <input id="ort-sthlm" type="radio" name="ort" value="sthlm" />
+        <label for="ort-sthlm">Stockholm</label>
+      </div>
+      <div>
+        <input id="ort-ume" type="radio" name="ort" value="ume" />
+        <label for="ort-ume">Umeå</label>
+      </div>
+      <div>
+        <input id="ort-lule" type="radio" name="ort" value="lule" />
+        <label for="ort-lule">Luleå</label>
+      </div>
+
+      <!-- KATEGORI -->
+      <label class="etikett" for="kategori">Kategori:</label>
+      <select id="kategori" name="kategori">
+        <option value="fakt">Fakturering</option>
+        <option value="net">Internet</option>
+        <option value="tel">Telefoni</option>
+        <option value="epost">E-post</option>
+      </select>
+
+      <!-- RUBRIK -->
+      <label class="etikett" for="rubrik">Rubrik:</label>
+      <input id="rubrik" type="text" name="rubrik" />
+
+      <!-- BESKRIVNING -->
+      <label class="etikett" for="beskrivning">Beskrivning:</label>
+      <textarea
+        id="beskrivning"
+        name="beskrivning"
+        rows="8"
+        cols="30"
+      ></textarea>
+
+      <!-- KNAPPAR -->
+      <div class="knappar">
+        <input type="submit" name="skicka" value="Submit" />
+        <input type="reset" name="Reset" />
+      </div>
+    </form>
+  </body>
+</html>

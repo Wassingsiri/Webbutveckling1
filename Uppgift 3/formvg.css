@@ -1,0 +1,94 @@
+@charset "utf-8"; /*Så att t.ex å ö ä inte ser konstiga ut*/
+/* För att Nunito ska gå att använda behövs en url*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap");
+
+html {
+  /*För att alla element i dokumentet ska inkludera padding och border i sin totala width och height*/
+  box-sizing: border-box;
+}
+
+body {
+  background: url(./Bilder/tree.jpg); /*Bakgrundsbild*/
+  background-size: cover; /*Då bilden är större än skärmen används egenskapen cover föra att få med hela bilden*/
+  font-family: "Nunito", sans-serif;
+}
+form {
+  max-width: 385px;
+  background-color: rgba(
+    202,
+    198,
+    198,
+    0.6
+  ); /*0.6 ändrar opaciteten enbart i boxen och inte för bakrundsbilden*/
+  margin: 0 auto; /* Centrerar formuläret */
+  padding: 20px; /*padding*/
+  border-radius: 7px; /*Rundade hörn*/
+  border: solid rgb(226, 223, 220);
+}
+
+h1,
+p {
+  margin: auto; /*Tar bort margialer. De justeras nedan */
+}
+/*Jag vill ha dessa 3 element lika stora*/
+input[type="text"],
+input[type="tel"],
+input [type="rubrik"] {
+  width: 16.5rem;
+  height: 2rem;
+  margin: 0 auto; /*Luft i formuläret har jag givit i elementet form genom padding. Marginal-top justeras nedan.*/
+  font-size: 1rem; /*Ökar textstorleken */
+}
+/*Alla label i html dokumentet har fått samma klass för att font storleken ska bli densamma.*/
+.val {
+  font-size: 1.2rem; /* Ökar textstorleken */
+  font-weight: bold; /*För att framhäva rubrikerna lite extra*/
+  display: block; /*För att rubriken/label ska hamna ovanför elementet*/
+}
+
+.beskrivning,
+.kort-text,
+.alternativ,
+.ort,
+p {
+  margin-top: 10px; /*Luft emellan elementen*/
+}
+.alternativ {
+  display: flex; /*För att få dem bredvid varandra*/
+  justify-content: left; /*Vänster justering*/
+}
+.column {
+  margin-left: 15px; /*För att skapa marginal mellan prioritet och kategori*/
+}
+fieldset {
+  border: none; /*Tar bort default border*/
+  padding-left: 0; /*Tar bort padding som webbläsaren automatisk lägger dit*/
+  margin-left: 0; /*Tar bort marginal som webbläsaren automatisk lägger dit*/
+}
+
+textarea {
+  height: 5rem;
+  width: 23.7rem; /*Här var det viktigt att använde rem då jag behövde ha . (punkt). 
+  Jag ville ha det för att den skulla ligga i linje med paragrafen i html.*/
+  font-family: "Nunito", sans-serif; /*För att inkludera samma font som i resten av dukomentet*/
+  font-size: 1rem; /* Ökar textstorleken */
+}
+input[type="submit"],
+[type="reset"] {
+  width: 10em; /*För att framhäva knapparna lite mer*/
+  height: 2em; /*För att framhäva knapparna lite mer*/
+  background: rgb(204, 144, 116); /*passande till bakgrundsbilden*/
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  font-size: 1rem; /*För att öka textstorleken i knapparna*/
+  margin-top: 10px; /*Luft emellan elementen*/
+}
+
+select {
+  font-size: 1rem; /*Ökade textstorleken här med då jag vill ha det enhetligt samt att default var för litet enligt mig och tillgängligheten ökar. */
+  width: 8rem; /*För att de båda elementen ska ligga i linje med ovanstående element.*/
+  height: 2rem;
+}
+.margin-left {
+  margin-left: 60px; /*60px för att de båda ska ha samma bredd som textfältet*/
+}

@@ -1,0 +1,59 @@
+body {
+  /*För att skapa lite mer luft valde jag att sätta margin 15px. Då det ska vara samma margin överalt räcker det att ha ett värde*/
+  margin: 15px;
+  /*Om inte fonten Candara finns på användarens dator ska Verdana användas instället. 
+  Finns inte Verdana ska en font användas inom den generiska font familjen: Sans-serif*/
+  font-family: Candara, Verdana, sans-serif;
+}
+
+h1 h2 h3 {
+  /*Samma ordning som i kommentaren ovan*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+.lista {
+  /*För att få bort punkterna har jag valt selektorn: list-style-type och valt none som står för ingen*/
+  list-style-type: none;
+}
+
+.tabell1 {
+  background-color: #ffcccc;
+  border: 1px solid #000000;
+  /*För att skapa luft mellan border och content. Då det inte är samma padding överallt har jag behövt skriva ut flera värden */
+  padding: 15px 10px 10px 10px;
+}
+
+caption {
+  /*Positionen är samma för rubrikerna till tabell1 och tabell2, därav valet av selektorn*/
+  text-align: left;
+  /*För att efterlikna storeken i uppgiften valde jag att justera upp till 20px*/
+  font-size: 20px;
+}
+.tabell2 {
+  background-color: #ffcc99;
+  border: 1px solid #000000;
+  /*För att skapa luft mellan border och content. Då det inte är samma padding överallt har jag behövt skriva ut flera värden */
+  padding: 15px 10px 10px 10px;
+}
+/* # står för id som är unik och bara kan användas en gång. Hade jag valt att styla <p> hade stylingen påverkat alla <p>*/
+#source {
+  color: #009900;
+  /* För att justera positionen för texten då den automatisk hamnar till vänster*/
+  text-align: right;
+}
+/*Den här selektorn används för att ändra färg när muspekaren dras över texten. */
+#source a:hover {
+  /*Här valde jag en ljus grå för att kontrasten inte skulle bli för svag till den svarta texten*/
+  background-color: rgb(206, 206, 206);
+  color: #000000;
+}
+.tabell2 th {
+  /* För att få linjen att fortsätta längre än texten passar egenskapen border-bottom bra in här*/
+  border-bottom: 1px solid #000000;
+  /*För att positionera texten till vänster behövde jag aktivt sälja en egenskap med värdet left*/
+  text-align: left;
+}
+/*Det här är botten av tabellen. Den skulle ha en annan bakgrund och textfärg därför behövde den ha en egen klass för styling i ett separat stylesheet*/
+.foot {
+  background-color: #333333;
+  color: rgb(194, 194, 194);
+}

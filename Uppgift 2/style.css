@@ -1,0 +1,31 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-left: 5%;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(8, 109, 67);
+}
+
+.margin-right {
+  margin-right: 18px;
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+p {
+  line-height: 140%;
+}

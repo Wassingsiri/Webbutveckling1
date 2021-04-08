@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Till för responsivitet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Länk till css fil-->
+    <link rel="stylesheet" href="formvg.css" />
+
+    <title>Supportformulär (VG)</title>
+  </head>
+  <body>
+    <form
+      action="http://staff.www.ltu.se/~susfah/VT19/parse_form.php"
+      method="POST"
+    >
+      <header>
+        <h1>Supportformulär</h1>
+        <p>Här kan du skicka ett ärende till vår supportavdelning</p>
+      </header>
+      <!--Textfälten till namn, telefon och rubrik har fått samma klass då jag vill att de skulle gå att styla exakt likadant.-->
+      <div class="kort-text">
+        <!--Elementet <label> kan användas till många form element. Genom att använda for="" koplas elementet till ett annat element. 
+        <label> hjälper de som använder skärmläsare då värdet läses upp när användaren fokuserar på t.ex <input> elementet.
+        Elementet underlättar även för användaren när hen klickar på texen inom <label> som då i sin tur kopplas ihop 
+        med t.ex radio- och checkboxes som kan vara svåra att klicka på då de är små.
+
+        Jag har label till alla element för att det ska bli mer tillgängligt för de som t.ex använder skärmläsare.
+        När man klickar på label fokuseras textfältet, t.ex till checkbox vilket underlättar användadet-->
+
+        <label class="val" for="namn">Ditt namn:</label>
+        <!--Med hjälp av attributet placeholder kan användaren få en hint av vad som förväntas skrivas i elementet <input>.
+        Hinten syns i input fältet innan användaren börjar skriva.-->
+
+        <!--autofocus hjälper till att veta vart på sidan man ska börja. Ett input fält markeras automatisk när en sida laddas.-->
+
+        <!--Nedan har jag använt attributet required så att användaren måste fylla i fältet för att kunna skicka in frågan.
+        Det underlättar vid återkoppling, alltså både för avsändare och mottagare.-->
+
+        <input
+          class="namn"
+          type="text"
+          id="namn"
+          name="namn"
+          placeholder="För- och efternamn"
+          required
+          autofocus
+        />
+      </div>
+      <div class="kort-text">
+        <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
+        <label class="val" for="telefon">Telefon:</label>
+
+        <input
+          class="telefon"
+          type="tel"
+          id="telefon"
+          name="telefon"
+          placeholder="07X-XXXXXX"
+          required
+        />
+      </div>
+      <!--För att i css kunna ändra positionen i förhållande till varandra-->
+      <div class="alternativ">
+        <div>
+          <label class="val" for="prioritet">Prioritet:</label>
+          <select id="prioritet" name="prioritet">
+            <option value="1">Låg</option>
+            <option value="2">Normal</option>
+            <option value="3">Hög</option>
+          </select>
+        </div>
+        <!--Här har jag delat in diven i en klass för att kunna redigera marginalen mellan de olika elementen i css-->
+        <div class="column">
+          <label class="val" for="kategori">Kategori:</label>
+          <select id="kategori" name="kategori">
+            <option value="fakt">Fakturering</option>
+            <option value="net">Internet</option>
+            <option value="tel">Telefoni</option>
+            <option value="epost">E-post</option>
+          </select>
+        </div>
+      </div>
+      <div class="ort">
+        <!--Här har jag valt fieldset för att få en label till hela gruppen samt till de enskilda radioknapparna. Gruperingen blir mer semantisk rätt.
+        Tagen fieldset talar om att det finns en relation mellan de olika fälten, något som inte en vanlig div hade gjort.
+        Detta förenklar för de som använder skärmläsare. Det underlättar också stylingen.-->
+        <fieldset>
+          <!--legent används för att ge rubrik till en grupp (fieldset). Det hjälper de med skärmläsare då den kan framföra rubriken/frågan med vardera val/input-->
+          <legend class="val">Tilldela till ort</legend>
+          <input type="radio" id="gbg" name="ort" value="gbg" />
+          <label for="gbg">Göteborg</label>
+          <input type="radio" id="sthlm" name="ort" value="sthlm" />
+          <label for="sthlm">Stockholm</label>
+          <input type="radio" id="ume" name="ort" value="ume" />
+          <label for="ume">Umeå</label>
+          <input type="radio" id="lule" name="ort" value="lule" />
+          <label for="lule">Luleå</label>
+        </fieldset>
+      </div>
+      <div class="kort-text">
+        <label class="val" for="rubrik">Rubrik:</label>
+        <input
+          type="text"
+          id="rubrik"
+          name="rubrik"
+          placeholder="Namnge ärendet"
+        />
+      </div>
+      <div class="beskrivning">
+        <label class="val" for="beskrivning">Beskrivning:</label>
+        <textarea
+          id="beskrivning"
+          placeholder="Skriv kort vad ärendet gäller"
+          name="beskrivning"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <input type="submit" name="skicka" value="Submit" />
+        <!--För att kunna ändra marginal i css-->
+        <input class="margin-left" type="reset" value="Reset" />
+      </div>
+    </form>
+  </body>
+</html>
