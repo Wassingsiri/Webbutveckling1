@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleprojekt.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="align-center flex-2">
+          <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
+          <h1 class="header-h1">
+            <a href="./indexprojekt.html">Din gröna oas</a>
+          </h1>
+        </div>
+        <div class="align-center flex-1">
+          <ul class="menu">
+            <li><a href="./indexprojekt.html">Hem</a></li>
+            <div class="dropdown">
+              <li>
+                <a href="./tjänster.html">Tjänster</a>
+                <ul class="dropdown-content">
+                  <li><a href="./rådgivning.html">Rådgivning</a></li>
+                  <li><a href="./beskärning.html">Beskärning av träd</a></li>
+                  <li><a href="./skötsel.html">Skötsel</a></li>
+                  <li><a href="./paket.html">Våra paket</a></li>
+                </ul>
+              </li>
+            </div>
+            <li><a href="./omoss.html">Om oss</a></li>
+            <li><a href="./kontakt.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!--DESSA divar nedan kan jag ta bort va??!-->
+    </header>
+    <main>
+      <div class="slogan">
+        <h1>Kontakt</h1>
+      </div>
+      <div class="flex-row">
+        <div class="left-kontakt">
+          <h2>Kontakt</h2>
+          <p>
+            Din gröna oas utgår från Nyköping men <br />
+            tar uppdrag i hela Sörmland.<br />
+            <br />
+            Adress:Lorem ipsum dolor sit amet<br />
+            Telefon: Lorem ipsum dolor sit amet<br />
+            Mail: Lorem ipsum dolor sit amet
+          </p>
+        </div>
+        <hr class="middle-kontakt" />
+        <div class="right">
+          <!--Här ska det vara ett fromulär-->
+          <!-- Ska jag lägga till action?-->
+          <form action="kontakt.html">
+          <form method="POST">
+            <div class="form-header">
+              <h2>Nedan kan du skicka en förfrågan</h2>
+            </div>
+            <div class="input">
+              <label class="name" for="namn">Namn:</label>
+              <input
+                class="name"
+                type="text"
+                id="namn"
+                name="namn"
+                placeholder="Namn"
+                required
+                autofocus
+              />
+            </div>
+            <div class="input">
+              <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
+              <label class="val" for="telefon">Mobil:</label>
+
+              <input
+                class="telefon"
+                type="tel"
+                id="telefon"
+                name="telefon"
+                placeholder="Mobil"
+                required
+              />
+            </div>
+            <div class="input">
+              <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
+              <label class="val" for="telefon">Mail:</label>
+
+              <input
+                class="mail"
+                type="mail"
+                id="mail"
+                name="mail"
+                placeholder="Epostadress"
+                required
+              />
+            </div>
+
+            <div class="">
+              <label class="val" for="beskrivning">Meddelande:</label>
+              <textarea
+                id="beskrivning"
+                placeholder="Skriv vilka/vilken tjänst du söker och vad du vill ha hjälp med"
+                name="beskrivning"
+                required
+              ></textarea>
+            </div>
+
+            <!--Lägg till en knapp där det ska stå "Jag samtycker till att mina personuppgifter behandlas enligt integritetspolicyn"-->
+
+            <div>
+              <input type="submit" name="skicka" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <h3>Kontaktuppgifter</h3>
+        <p>
+          Adress:Lorem ipsum dolor sit amet<br />
+          Telefon: Lorem ipsum dolor sit amet<br />
+          Mail: Lorem ipsum dolor sit amet
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

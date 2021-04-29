@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
 /* || Gäller för hela sidan || */
 html {
+  /*För att alla element i dokumentet ska inkludera padding och border i sin totala width och height*/
   box-sizing: border-box;
 }
 
@@ -18,9 +20,11 @@ body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* SKA JAG HA MARGIN HÄR?! Blev fel med bilden så tog bort
 main {
   margin: 0 100px;
 }
+*/
 
 /* || Header och Navigation */
 
@@ -34,15 +38,17 @@ nav.navbar {
 }
 
 h1.header-h1 {
-  font-size: 45px; /*Gör om till rem pga TILLGÄNGLIGHET*/
+  font-size: 50px; /*Gör om till rem pga TILLGÄNGLIGHET*/
+  font-family: "Charmonman", cursive;
 }
-.header-h1 > a{
-text-decoration: none;
-color: black;
+.header-h1 > a {
+  text-decoration: none;
+  color: black;
 }
 
 .align-center .icon-slogan {
-  width: 8%;
+  width: 60px;
+  height: 60px;
   margin: 10px;
 }
 
@@ -73,7 +79,7 @@ ul.menu a {
 
 .dropdown-content {
   list-style: none;
-  background-color: rosybrown;
+  background-color: #f4dada;
   position: absolute; /*lägger sig på, framför skiter i det innan, bra för responsivitet*/
   display: none; /*Ska inte synas förens pekaren dras över*/
   padding: 7px 7px 7px 4px; /* Skapar luft mellan kanten och texten */
@@ -88,23 +94,34 @@ li a:hover {
   text-decoration: underline; /* Skapar linje under vald rubrik*/
 }
 
-/* ||    Bakgrundsbild och rubrik ||   */
+/* ||  Gäller för alla sidor   Bakgrundsbild, rubrik och mailbox ||   */
 
 .slogan {
-  background-image: url(./bilder/pexels-creative-vix-7283redigerad2.jpeg);
+  background-image: url(./bilder/pexels-adrianna-calvo-1086177.jpg);
   background-size: cover;
   padding: 70px;
-  background-position: bottom;
-  color: rgb(0, 0, 0);
+  background-position: center;
+  color: rgb(255, 255, 255);
   text-align: center;
+  height: 300px; /*Här la jag height pga hade inte lika mycket content
+  som på första sidan vilken gjorde att bilden blev mindre*/
 }
 
-/* ====== SIDA 1, HEM /indexprojekt====== */
+h2,
+h1 {
+  margin-bottom: 10px; /*Skapa luft mellan rubrik och text */
+}
 
-.flex-row{
-  display: flex; 
- justify-content: center; /*positionerar knapp med flex box */
- margin-top: 20px;
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+
+/*Varför blir det inte bold???*/
+h3 {
+  font-weight: bold;
 }
 
 .mailto-box {
@@ -113,40 +130,59 @@ li a:hover {
   width: 100px;
   height: 50px;
   display: flex; /**/
-  align-items:center;
-  justify-content: center;/*positionerar text med flex box */
-
-  
+  align-items: center;
+  justify-content: center; /*positionerar text med flex box */
 }
 
-.mailto-box > a{
+.mailto-box > a {
   text-decoration: none;
   color: black;
 }
+
+/* Den här är på alla sidor för att få till flexbox */
+.flex-row {
+  display: flex;
+  justify-content: center; /*positionerar knapp med flex box */
+}
+
+/* ====== SIDA 1, HEM /indexprojekt====== */
+
 .flex-container {
   display: flex; /*För att få dem bredvid varandra*/
-  justify-content: space-around; /*Vänster justering*/
-  margin-top: 20px; /* Luft mellan olika content */
+  justify-content: space-around; /*Vänster justering VADÅ VÄNSTER?!*/
 }
 .content-box {
   flex: 1; /* Boxarna tar upp lika mycket plats */
-  padding: 30px; /* Skapa luft emellan boxarna */
+  padding: 20px; /* Skapa luft emellan boxarna */
+}
+
+/*För att få lika mycket mellanrum på höger satm på vänstra sidan*/
+.content-box,
+.margin-right {
+  margin-right: 40px;
 }
 
 .grid-image {
   width: 100%;
   height: auto;
-  padding: 0px 20px 40px 20px;
-
+  padding: 30px 10px 20px 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /*  Dessa två nedan blir samma för alla sidor då jag vill ha h2 och p i samma storlek. */
-p .flex-container {
+.content-box p {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+  margin-left: 30px; /*Jag behövde sätta marginal-left här istället för 
+  diven flex-container p.g.a text och bild hade olka defauls marginal*/
+
+  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
+  text-align: justify;
 }
 
-h2 .flex-container {
+.content-box h2 {
   font-size: 30px;
+  margin-left: 30px;
 }
 
 /* ===== För responsivitet ==== */
@@ -172,7 +208,7 @@ h2 .flex-container {
 
 .content-box1 {
   flex: 1;
-  padding: 30px;
+  padding: 40px;
 }
 
 .bild1 {
@@ -180,10 +216,19 @@ h2 .flex-container {
   height: auto;
 }
 
-.content-box1 h2,
-p,
-.bild1 {
-  background: beige;
+.content-box1 p {
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
+  text-align: justify;
+}
+
+.content-box1 h2 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.background-color {
+  background-color: #dbe9b7;
 }
 
 /* ===== SIDA 3, rådgivning======*/
@@ -198,44 +243,119 @@ p,
   flex-direction: row;
 }
 
+.grid-image2 {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  margin-left: 40px;
+}
+
 .flex-column .text-section {
   flex: 1;
+}
+
+.right p {
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+
+  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
+  text-align: justify;
+}
+
+.left-text p {
+  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
+  text-align: justify;
+}
+
+.right .flex-row .mailto-box {
+  margin: 30px;
+}
+
+.middle {
+  height: 350px;
+  margin-top: 110px;
+  margin-left: 60px;
+}
+
+.left {
+  flex: 1;
+  margin-right: 25px; /*För att mittencentrera sträcket*/
+  margin-top: 40px;
+}
+.right {
+  flex: 1;
+  padding: 50px;
+}
+
+.right h2 .left-text {
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.col2 {
+  display: flex;
+  flex-basis: 50%;
+
+  padding: 10px;
 }
 
 /* ===== SIDA 4 ======*/
 
 /* ===== SIDA 5 ======*/
 
-/* ===== SIDA 6 ======*/
+/* ===== Kontakt======*/
+
+/*På den här sidan behövde sträcket ha en annan position/storlek. Därför fick den en egen klass.*/
+.middle-kontakt {
+  height: 300px;
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.left-kontakt {
+  flex: 1;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+/* ===== Om oss ====== */
+
+.left-text {
+  flex: 1;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+.bryt {
+  margin: 20px;
+  width: 400px;
+}
+
+.left-text p h2 {
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
+  text-align: justify;
+  margin-left: 60px;
+}
 
 /* ===== Footer, samma på alla sidor ====*/
 
 footer {
-  background-color: rgb(189, 165, 165);
+  background-color: rgb(224, 197, 197);
   background-size: 100%;
-  height: 90px;
-  margin-top: 30px;
+  height: 150px;
+}
+
+.footer {
+  padding: 20px;
   margin-bottom: none;
+  align-items: center;
+
+  margin-left: 30px;
+
+  justify-content: center; /*positionerar text med flex box */
 }
-
-.left {
-flex: 1;
-margin-right: 20px;
-}
-.right {
-flex: 1;
-}
-
-.container{
-display:flex;
-flex-wrap: wrap;
-}
-
-.col2 {
-  display: flex;
-  flex-basis: 50%;
-  border: 1px solid white;
-}
-
-
-
