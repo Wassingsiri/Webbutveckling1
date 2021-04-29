@@ -20,11 +20,13 @@ body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* SKA JAG HA MARGIN HÄR?! Blev fel med bilden så tog bort
+
 main {
   margin: 0 100px;
 }
-*/
+p {
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
+ }
 
 /* || Header och Navigation */
 
@@ -151,13 +153,19 @@ h3 {
   display: flex; /*För att få dem bredvid varandra*/
   justify-content: space-around; /*Vänster justering VADÅ VÄNSTER?!*/
 }
-.content-box {
-  flex: 1; /* Boxarna tar upp lika mycket plats */
+.content-box-3 {
+  flex-basis: 30%;
+  padding: 20px; /* Skapa luft emellan boxarna */
+}
+.content-box-4 {
+  flex-basis: 20%;
   padding: 20px; /* Skapa luft emellan boxarna */
 }
 
+
+
+
 /*För att få lika mycket mellanrum på höger satm på vänstra sidan*/
-.content-box,
 .margin-right {
   margin-right: 40px;
 }
@@ -165,15 +173,13 @@ h3 {
 .grid-image {
   width: 100%;
   height: auto;
-  padding: 30px 10px 20px 10px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 /*  Dessa två nedan blir samma för alla sidor då jag vill ha h2 och p i samma storlek. */
 .content-box p {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
-  margin-left: 30px; /*Jag behövde sätta marginal-left här istället för 
+  
+  /*Jag behövde sätta marginal-left här istället för 
   diven flex-container p.g.a text och bild hade olka defauls marginal*/
 
   text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
@@ -182,7 +188,6 @@ h3 {
 
 .content-box h2 {
   font-size: 30px;
-  margin-left: 30px;
 }
 
 /* ===== För responsivitet ==== */
@@ -200,32 +205,18 @@ h3 {
 }
 
 /* ===== SIDA 2, Tjänster ======*/
-.flex-container .flex-4 {
-  display: flex;
-  justify-content: space-around;
-  background-color: white;
-}
 
-.content-box1 {
-  flex: 1;
-  padding: 40px;
-}
+
+
+
 
 .bild1 {
   width: 100%;
   height: auto;
 }
 
-.content-box1 p {
-  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
-  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
-  text-align: justify;
-}
 
-.content-box1 h2 {
-  margin-top: 20px;
-  font-size: 30px;
-}
+
 
 .background-color {
   background-color: #dbe9b7;
@@ -247,7 +238,7 @@ h3 {
   width: 100%;
   height: auto;
   padding: 10px;
-  margin-left: 40px;
+
 }
 
 .flex-column .text-section {
@@ -270,16 +261,18 @@ h3 {
   margin: 30px;
 }
 
-.middle {
-  height: 350px;
-  margin-top: 110px;
-  margin-left: 60px;
+.divider-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  height: 80%;
 }
 
 .left {
   flex: 1;
-  margin-right: 25px; /*För att mittencentrera sträcket*/
-  margin-top: 40px;
+  padding: 50px;
 }
 .right {
   flex: 1;
@@ -358,4 +351,17 @@ footer {
   margin-left: 30px;
 
   justify-content: center; /*positionerar text med flex box */
+}
+
+.margin-top-lg {
+  margin-top: 40px;
+}
+.margin-top-md {
+  margin-top: 30px;
+}
+.margin-top-sm {
+  margin-top: 20px;
+}
+.margin-top-xs {
+  margin-top: 10px;
 }
