@@ -12,9 +12,9 @@
       <nav class="navbar">
         <div class="align-center flex-2">
           <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
-          <h1 class="header-h1">
+          <p class="logo-title">
             <a href="./indexprojekt.html">Din gröna oas</a>
-          </h1>
+          </p>
         </div>
         <div class="align-center flex-1">
           <ul class="menu">
@@ -36,11 +36,15 @@
         </div>
       </nav>
     </header>
+
+
     <div class="slogan">
       <h1>Kontakt</h1>
     </div>
+
+
     <main>
-      <div class="flex-container">
+      <div class="flex-row">
         <div class="left">
           <h2>Kontakt</h2>
           <p>
@@ -56,67 +60,63 @@
         <div class="right">
           <!--Här ska det vara ett fromulär-->
           <!-- Ska jag lägga till action?-->
-          <form method="POST">
+          <form action="#" method="POST">
             <div class="form-header">
               <h2>Nedan kan du skicka en förfrågan</h2>
             </div>
-            <div class="input">
-              <label class="name" for="namn">Namn:</label>
+            <div class="form-field">
+              <label for="namn">Namn:</label>
               <input
-                class="name"
                 type="text"
                 id="namn"
                 name="namn"
-                placeholder="Namn"
                 required
                 autofocus
               />
             </div>
-            <div class="input">
+            <div class="form-field">
               <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
-              <label class="val" for="telefon">Mobil:</label>
-
+              <label for="telefon">Mobil:</label>
               <input
-                class="telefon"
                 type="tel"
                 id="telefon"
                 name="telefon"
-                placeholder="Mobil"
                 required
               />
             </div>
-            <div class="input">
+            <div class="form-field">
               <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
-              <label class="val" for="telefon">Mail:</label>
+              <label for="telefon">Mail:</label>
 
               <input
-                class="mail"
                 type="mail"
                 id="mail"
                 name="mail"
-                placeholder="Epostadress"
                 required
               />
             </div>
 
-            <div class="">
-              <label class="val" for="beskrivning">Meddelande:</label>
+            <div class="form-field">
+              <label  for="beskrivning">Meddelande:</label>
               <textarea
+                rows="6"
                 id="beskrivning"
-                placeholder="Skriv vilka/vilken tjänst du söker och vad du vill ha hjälp med"
                 name="beskrivning"
                 required
               ></textarea>
             </div>
-
+              <div class="form-field checkbox">
+                <input required type="checkbox" id="gdpr" name="gdpr">
+                <label for="gdpr">Härmed samtycker jag till att mina personuppgifter behandlas
+                  enligt integritetspolicyn</label>
+              </div>
             <div>
-              <input type="submit" name="skicka" value="Submit" />
+              <input class="submit-button" type="submit" name="skicka" value="Skicka" />
             </div>
             <br />
             <!--Följa GDPR lagen-->
             <p>
-              Härmed samtycker jag till att mina personuppgifter behandlas
-              enligt integritetspolicyn
+              
             </p>
           </form>
         </div>

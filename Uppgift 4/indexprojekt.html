@@ -14,45 +14,66 @@
       <nav class="navbar">
         <!--Den här klassen används för att slyta med flexbox-->
         <div class="align-center flex-2">
-          <img
-            class="icon-slogan"
-            src="./bilder/tree-icon-1527.png"
-            alt="tree"
-          />
-          <h1 class="header-h1">
+          <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
+          <p class="logo-title">
             <a href="./indexprojekt.html">Din gröna oas</a>
-          </h1>
+          </p>
         </div>
-        <div class="align-center flex-1">
-          <ul class="menu">
-            <li><a href="./indexprojekt.html">Hem</a></li>
-            <div class="dropdown">
-              <li>
-                <a href="./tjänster.html">Tjänster</a>
-                <ul class="dropdown-content">
-                  <li><a href="./rådgivning.html">Rådgivning</a></li>
-                  <li><a href="./beskärning.html">Beskärning</a></li>
-                  <li><a href="./skötsel.html">Skötsel</a></li>
-                  <li><a href="./paket.html">Våra paket</a></li>
-                </ul>
+        <div class="align-center flex-1 menu-wrapper">
+     <!-- MOBILMENYN -->
+          <div class="mobile-menu">
+            <label for="test" class="mobile-menu-link" href="#">Meny</label>
+            <ul tabindex="0" id="test" class="mobile-menu-links">
+              <li><a href="./indexprojekt.html">Hem</a></li>
+              <li >
+                
+                  <a href="">Tjänster</a>
+                  <ul >
+                    <li><a href="./rådgivning.html">Rådgivning</a></li>
+                    <li><a href="./beskärning.html">Beskärning</a></li>
+                    <li><a href="./skötsel.html">Skötsel</a></li>
+                    <li><a href="./paket.html">Våra paket</a></li>
+                  </ul>
+
               </li>
-            </div>
-            <li><a href="./omoss.html">Om oss</a></li>
-            <li><a href="./kontakt.html">Kontakt</a></li>
-          </ul>
+              <li><a href="./omoss.html">Om oss</a></li>
+              <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+     <!-- MOBILMENYN SLUT -->
+      <!-- DESKTOPMENYN -->
+      <ul class="desktop-menu">
+        <li><a href="./indexprojekt.html">Hem</a></li>
+        <li class="dropdown">
+          
+            <a href="">Tjänster</a>
+            <ul class="dropdown-content">
+              <li><a href="./rådgivning.html">Rådgivning</a></li>
+              <li><a href="./beskärning.html">Beskärning</a></li>
+              <li><a href="./skötsel.html">Skötsel</a></li>
+              <li><a href="./paket.html">Våra paket</a></li>
+            </ul>
+
+        </li>
+        <li><a href="./omoss.html">Om oss</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <!-- DESKTOPMENYN SLUT -->
         </div>
       </nav>
     </header>
     <div class="slogan">
-      <h1>Vad har du för trädgårdsdrömmar?</h1>
-      <h2>Vi hjälper dig!</h2>
-      <div class="flex-row">
-        <!--Används för att centrera ensamma element, tex knappar -->
+      <h1><span class="opacity">Vad har du för trädgårdsdrömmar?</span></h1>
+      <h2>
+        <span class="opacity">Vi hjälper dig!</span>
+      </h2>
+ 
+    
         <div class="mailto-box">
           <!--EV GÖRA ETT FORMULÄR I STÄLLET SOM MAN BLIR LÄNKAD TILL-->
-          <a href="mailto:siri.wassing@hotmail.com">Boka idag</a>
+          <a href="./kontakt.html">Boka idag</a>
         </div>
-      </div>
+     
     </div>
 
     <main>
