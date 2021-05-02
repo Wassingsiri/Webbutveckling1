@@ -3,48 +3,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
 /* || Gäller för hela sidan || */
+
 html {
-  /*För att alla element i dokumentet ska inkludera padding och border i sin totala width och height*/
+  /*För att alla element i dokumentet ska inkludera padding och border i sin totala width och height.
+  Det blir lättare när jag själv ska styla då margin och padding inte överlappas. */
   box-sizing: border-box;
 }
 
-*,         /* KOMMENTERA */
+*, /*Gör så att det gäller alla element i ett html dokument*/
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: inherit; /*inherit ärver samma värde som föräldren, och i och med att jag satt border-box
+  kommer alla andra element att dela samma värde. */
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller för alla text förrutom <p>*/
 }
-
 
 main {
-  margin: 0 100px;
+  margin: 0 100px; /*För att få in all content, skapa mer luft*/
 }
 p {
-  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
- }
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller alla p */
+}
 
-/* || Header och Navigation */
+/* || =======   Header och Navigation ======= ||*/
 
 nav.navbar {
   display: flex; /* Container för hela menyn*/
-  flex-direction: row;
-  justify-content: space-between; /* Det blir ingen skillnad med denna!? */
+  flex-direction: row; /*För att de ska hamna bredvid varandra och inte i column*/
+  justify-content: space-between; /* Mellanrum i menyn*/
   height: 100px; /* Höjden på headern */
   align-items: center; /* För att få alla rubriker på samma rad */
-  padding: 0 30px; /* 30px padding till höger och vänster */
+  padding: 0 1.875em; /* 30px padding till höger och vänster, em äkar tillgängligheten då enheten 
+  anpassar sig efter vilken textstorlek som snvändaren har valt i sin webbläsare. */
 }
 
 h1.header-h1 {
-  font-size: 50px; /*Gör om till rem pga TILLGÄNGLIGHET*/
-  font-family: "Charmonman", cursive;
+  font-size: 3.125em;
+  font-family: "Charmonman", cursive; /*Den här fonten var inte med i min originalidé
+  men jag ville ha något mer som stack ut*/
 }
 .header-h1 > a {
-  text-decoration: none;
+  text-decoration: none; /*För att få bort understräck under Din gröna oas.*/
   color: black;
 }
 
@@ -56,21 +60,19 @@ h1.header-h1 {
 
 ul.menu {
   display: flex; /* För att få rubrikerna bredvid varandra */
-  justify-content: space-between;
+  justify-content: space-between; /*Luft emellan*/
   list-style: none; /* */
-  flex: 1; /*  */
+  flex: 1; /* All content ska fylla hela utrymmet av föräldren */
 }
 ul.menu a {
-  text-decoration: none; /* */
+  text-decoration: none; /* Tar bort understräck*/
   color: rgb(0, 0, 0); /* */
 }
 
-/* DET BLIR INGEN SKILLNAD OM JAG TAR BORT DENNA?!*/
 .align-center {
   display: flex; /*För att få slogan och menyn bredvid varandra*/
-  align-items: center; /* Så att det blir lättare att justera position, marginal och padding*/
+  align-items: center; /* mittencentrering vertikalt av content*/
 }
-
 /*Nedan har jag satt flex: 2, till slogan då ville ha menyn mer till höger*/
 .flex-2 {
   flex: 2; /*Tar upp 2/3*/
@@ -96,11 +98,12 @@ li a:hover {
   text-decoration: underline; /* Skapar linje under vald rubrik*/
 }
 
-/* ||  Gäller för alla sidor   Bakgrundsbild, rubrik och mailbox ||   */
+/* ========  Gäller för alla sidor  - Bakgrundsbild, rubrik och mailbox ======= */
 
 .slogan {
   background-image: url(./bilder/pexels-adrianna-calvo-1086177.jpg);
   background-size: cover;
+  background-position: top;
   padding: 70px;
   background-position: center;
   color: rgb(255, 255, 255);
@@ -121,17 +124,12 @@ h2 {
   font-size: 30px;
 }
 
-/*Varför blir det inte bold???*/
-h3 {
-  font-weight: bold;
-}
-
 .mailto-box {
   border: green;
   background-color: rgb(186, 207, 154);
   width: 100px;
-  height: 50px;
-  display: flex; /**/
+  height: 40px;
+  display: flex; /*positionerar text med flex box*/
   align-items: center;
   justify-content: center; /*positionerar text med flex box */
 }
@@ -147,73 +145,40 @@ h3 {
   justify-content: center; /*positionerar knapp med flex box */
 }
 
-/* ====== SIDA 1, HEM /indexprojekt====== */
+/* ======= GÄLLER FÖR ALLA SIDOR  Main content =======  */
 
 .flex-container {
   display: flex; /*För att få dem bredvid varandra*/
   justify-content: space-around; /*Vänster justering VADÅ VÄNSTER?!*/
 }
+
+/* ====== SIDA 1, HEM /indexprojekt====== */
+
 .card-3 {
-  flex-basis: 30%;
+  flex-basis: 30%; /* 30% av containern/föräldern. */
   padding: 20px; /* Skapa luft emellan boxarna */
-}
-.card-4 {
-  flex-basis: 20%;
-  padding: 20px; /* Skapa luft emellan boxarna */
-}
-
-
-
-
-/*För att få lika mycket mellanrum på höger satm på vänstra sidan*/
-
-.img-fluid {
-  width: 100%;
-  height: auto;
-}
-
-/*  Dessa två nedan blir samma för alla sidor då jag vill ha h2 och p i samma storlek. */
-
-
-
-
-/* ===== För responsivitet ==== */
-
-@media all and (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  nav {
-    flex-direction: column;
-  }
-  .flex-row .container {
-    flex-direction: column;
-  }
 }
 
 /* ===== SIDA 2, Tjänster ======*/
 
+.card-4 {
+  flex-basis: 20%; /* 20% av containern/föräldern. */
+  padding: 20px; /* Skapa luft emellan boxarna */
+}
 
+.card-content {
+  padding: 20px; /*Så att texten inte ligger precis i kanterna*/
+}
 
+.card {
+  background-color: #dbe9b7;
+}
 
-
-/* ===== SIDA 3, rådgivning======*/
-
-
+/* ===== SIDA 3,3,5 och 6 ======  */
 
 .right .flex-row .mailto-box {
-  margin: 30px;
+  margin: 30px; /*Luft mellan box och text*/
 }
-
-.divider-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.divider {
-  height: 80%;
-}
-
 .left {
   flex: 1;
   padding: 50px;
@@ -223,10 +188,9 @@ h3 {
   padding: 50px;
 }
 
-
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*För att få bilderna 2+2*/
   margin-bottom: 40px;
 }
 
@@ -237,43 +201,16 @@ h3 {
   padding: 10px;
 }
 
-/* ===== SIDA 4 ======*/
-
-/* ===== SIDA 5 ======*/
-
 /* ===== Kontakt======*/
 
-/*På den här sidan behövde sträcket ha en annan position/storlek. Därför fick den en egen klass.*/
-.middle-kontakt {
-  height: 300px;
-  margin-top: 30px;
-  margin-left: 60px;
-}
-
-.left-kontakt {
-  flex: 1;
-  margin-left: 80px;
-  margin-top: 40px;
+form {
 }
 
 /* ===== Om oss ====== */
 
-.left-text {
-  flex: 1;
-  margin-top: 50px;
-  margin-left: 60px;
-}
-
 .bryt {
   margin: 20px;
   width: 400px;
-}
-
-.left-text p h2 {
-  font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif;
-  text-justify: inter-word; /* Textjustering för att få texten som i tidningar*/
-  text-align: justify;
-  margin-left: 60px;
 }
 
 /* ===== Footer, samma på alla sidor ====*/
@@ -288,19 +225,25 @@ footer {
   padding: 20px;
   margin-bottom: none;
   align-items: center;
-
   margin-left: 30px;
-
   justify-content: center; /*positionerar text med flex box */
+  font-size: 0.8em; /*Lite mindre storlek än övrigt på sidan*/
 }
 
-.card {
-  background-color: #dbe9b7;
+/* ===== Dessa återanvänds på flera sidor ===== */
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
 
+.divider-wrapper {
+  display: flex; /*För att få den vertikal*/
+  align-items: center; /*Positionering i mitten*/
+}
 
-.card-content {
-  padding: 20px;
+.divider {
+  height: 80%;
 }
 
 .margin-top-lg {
@@ -314,4 +257,18 @@ footer {
 }
 .margin-top-xs {
   margin-top: 10px;
+}
+
+/* ===== För responsivitet ==== */
+
+@media all and (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .flex-row .container {
+    flex-direction: column;
+  }
 }

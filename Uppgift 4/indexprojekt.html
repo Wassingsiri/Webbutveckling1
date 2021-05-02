@@ -2,16 +2,23 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
+    <!--Bra för responsiviteten. Koden talar om att skärmbredden på enheten ska användas och att sidan inte ska zoomas 
+      vilket underlättar vid användning av en mobiltelefon. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styleprojekt.css" />
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Trädgårdstjänster | Boka idag!</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
+        <!--Den här klassen används för att slyta med flexbox-->
         <div class="align-center flex-2">
-          <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
+          <img
+            class="icon-slogan"
+            src="./bilder/tree-icon-1527.png"
+            alt="tree"
+          />
           <h1 class="header-h1">
             <a href="./indexprojekt.html">Din gröna oas</a>
           </h1>
@@ -24,7 +31,7 @@
                 <a href="./tjänster.html">Tjänster</a>
                 <ul class="dropdown-content">
                   <li><a href="./rådgivning.html">Rådgivning</a></li>
-                  <li><a href="./beskärning.html">Beskärning av träd</a></li>
+                  <li><a href="./beskärning.html">Beskärning</a></li>
                   <li><a href="./skötsel.html">Skötsel</a></li>
                   <li><a href="./paket.html">Våra paket</a></li>
                 </ul>
@@ -35,13 +42,12 @@
           </ul>
         </div>
       </nav>
-      <!--DESSA divar nedan kan jag ta bort va??!-->
     </header>
     <div class="slogan">
       <h1>Vad har du för trädgårdsdrömmar?</h1>
       <h2>Vi hjälper dig!</h2>
-
       <div class="flex-row">
+        <!--Används för att centrera ensamma element, tex knappar -->
         <div class="mailto-box">
           <!--EV GÖRA ETT FORMULÄR I STÄLLET SOM MAN BLIR LÄNKAD TILL-->
           <a href="mailto:siri.wassing@hotmail.com">Boka idag</a>
@@ -52,13 +58,32 @@
     <main>
       <div class="flex-container margin-top-lg">
         <div class="card-3">
+          <!--Bilderna från pexels är gratis och jag behöver inte nämnta fotografen, står tydligt på deras hemsida.
+          Hos en del bilder heter fotografens namn vilket är ett plus-->
+          <img
+            class="img-fluid"
+            src="./bilder/pexels-creative-vix-7294.jpg"
+            alt="bench in a garden"
+          />
+
+          <h2 class="margin-top-xs">Tidigare uppdrag</h2>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            sit amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis
+            quam eget feugiat. Integer tincidunt dolor molestie lacus varius
+            eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
+            tristique"
+          </p>
+        </div>
+        <div class="card-3">
+          <!-- img-fluid Kan användas till alla bilder då width och height anpassar sig till sin föräldrar. -->
           <img
             class="img-fluid"
             src="./bilder/pexels-rachel-xiao-772429.jpg"
             alt="hej"
           />
 
-          <h2 class="margin-top-xs">Våra paket</h2>
+          <h2 class="margin-top-xs">Tidigare uppdrag</h2>
           <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             sit amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis
@@ -74,23 +99,7 @@
             alt="hej"
           />
 
-          <h2 class="margin-top-xs">Våra paket</h2>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            sit amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis
-            quam eget feugiat. Integer tincidunt dolor molestie lacus varius
-            eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
-            tristique"
-          </p>
-        </div>
-        <div class="card-3">
-          <img
-            class="img-fluid"
-            src="./bilder/pexels-rachel-xiao-772429.jpg"
-            alt="hej"
-          />
-
-          <h2 class="margin-top-xs">Våra paket</h2>
+          <h2 class="margin-top-xs">Tidigare uppdrag</h2>
           <p>
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             sit amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis
@@ -103,7 +112,7 @@
     </main>
     <footer>
       <div class="footer">
-        <h2 class="margin-top-xs">Kontaktuppgifter</h2>
+        <h3 class="margin-top-xs">Kontaktuppgifter</h3>
         <p>
           Adress:Lorem ipsum dolor sit amet<br />
           Telefon: Lorem ipsum dolor sit amet<br />
