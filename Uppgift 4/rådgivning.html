@@ -2,40 +2,61 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
+    <!--Bra för responsiviteten. Koden talar om att skärmbredden på enheten ska användas och att sidan inte ska zoomas 
+      vilket underlättar vid användning av en mobiltelefon. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styleprojekt.css" />
-    <title>Din gröna oas</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Trädgårdstjänster | Boka idag!</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
+        <!--Den här klassen används för att slyta med flexbox-->
         <div class="align-center flex-2">
           <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
-          <h1 class="header-h1">
+          <p class="logo-title">
             <a href="./indexprojekt.html">Din gröna oas</a>
-          </h1>
+          </p>
         </div>
-        <div class="align-center flex-1">
-          <ul class="menu">
-            <li><a href="./indexprojekt.html">Hem</a></li>
-            <div class="dropdown">
+        <div class="align-center flex-1 menu-wrapper">
+          <!-- MOBILMENYN -->
+          <div class="mobile-menu">
+            <label for="test" class="mobile-menu-link" href="#">Meny</label>
+            <ul tabindex="0" id="test" class="mobile-menu-links">
+              <li><a href="./indexprojekt.html">Hem</a></li>
               <li>
-                <a href="./tjänster.html">Tjänster</a>
-                <ul class="dropdown-content">
+                <a href="">Tjänster</a>
+                <ul>
                   <li><a href="./rådgivning.html">Rådgivning</a></li>
                   <li><a href="./beskärning.html">Beskärning</a></li>
                   <li><a href="./skötsel.html">Skötsel</a></li>
                   <li><a href="./paket.html">Våra paket</a></li>
                 </ul>
               </li>
-            </div>
+              <li><a href="./omoss.html">Om oss</a></li>
+              <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <!-- MOBILMENYN SLUT -->
+          <!-- DESKTOPMENYN -->
+          <ul class="desktop-menu">
+            <li><a href="./indexprojekt.html">Hem</a></li>
+            <li class="dropdown">
+              <a href="">Tjänster</a>
+              <ul class="dropdown-content">
+                <li><a href="./rådgivning.html">Rådgivning</a></li>
+                <li><a href="./beskärning.html">Beskärning</a></li>
+                <li><a href="./skötsel.html">Skötsel</a></li>
+                <li><a href="./paket.html">Våra paket</a></li>
+              </ul>
+            </li>
             <li><a href="./omoss.html">Om oss</a></li>
             <li><a href="./kontakt.html">Kontakt</a></li>
           </ul>
+          <!-- DESKTOPMENYN SLUT -->
         </div>
       </nav>
-      <!--DESSA divar nedan kan jag ta bort va??!-->
     </header>
 
     <div class="slogan">
@@ -48,28 +69,28 @@
             <div class="col2">
               <img
                 class="img-fluid"
-                src="./bilder/pexels-rachel-xiao-772429.jpg"
+                src="./bilder/pexels-tirachard-kumtanom-733857.jpg"
                 alt=""
               />
             </div>
             <div class="col2">
               <img
                 class="img-fluid"
-                src="./bilder/pexels-rachel-xiao-772429.jpg"
+                src="./bilder/pexels-ketut-subiyanto-4126743.jpg"
                 alt=""
               />
             </div>
             <div class="col2">
               <img
                 class="img-fluid"
-                src="./bilder/pexels-rachel-xiao-772429.jpg"
+                src="./bilder/pexels-picjumbocom-196644.jpg"
                 alt=""
               />
             </div>
             <div class="col2">
               <img
                 class="img-fluid"
-                src="./bilder/pexels-rachel-xiao-772429.jpg"
+                src="./bilder/pexels-pavel-danilyuk-6925201.jpg"
                 alt=""
               />
             </div>
@@ -87,12 +108,12 @@
             ad litora torquent per conubia nostra, per inceptos himenaeos.
             Integer tellus mauris, finibus id metus ut, commodo finibus justo.
           </p>
-        
-            <div class="mailto-box margin-auto">
-              <!--EV GÖRA ETT FORMULÄR I STÄLLET SOM MAN BLIR LÄNKAD TILL-->
-              <a href="./kontakt.html">Boka idag</a>
-            </div>
-         
+
+          <div class="mailto-box margin-auto">
+            <!--EV GÖRA ETT FORMULÄR I STÄLLET SOM MAN BLIR LÄNKAD TILL-->
+            <a href="./kontakt.html">Boka idag</a>
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
             amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis quam

@@ -2,10 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
-
 /* ===== För responsivitet ==== */
-
-
 
 /* || Gäller för hela sidan || */
 
@@ -26,7 +23,6 @@ html {
 
 body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller för alla text förrutom <p>*/
-
 }
 
 .mobile-menu {
@@ -37,11 +33,14 @@ main {
   margin: 0 100px; /*För att få in all content, skapa mer luft*/
 }
 
-input, textarea {
+input,
+textarea {
   padding-left: 4px;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller för alla text förrutom <p>*/
 
   margin-bottom: 10px; /*Skapa luft mellan rubrik och text */
@@ -54,7 +53,9 @@ h2 {
   font-size: 30px;
 }
 
-p, input, textarea  {
+p,
+input,
+textarea {
   font-family: "Raleway", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller alla p */
   font-size: 16px;
 }
@@ -90,8 +91,6 @@ nav.navbar {
   margin: 10px;
 }
 
-
-
 .desktop-menu {
   display: flex; /* För att få rubrikerna bredvid varandra */
   justify-content: space-between; /*Luft emellan*/
@@ -115,7 +114,6 @@ nav.navbar {
 }
 
 .dropdown-content {
- 
   background-color: #f4dada;
   position: absolute; /*lägger sig på, framför skiter i det innan, bra för responsivitet*/
   display: none; /*Ska inte synas förens pekaren dras över*/
@@ -144,8 +142,6 @@ li a:hover {
   height: 300px; /*Här la jag height pga hade inte lika mycket content
   som på första sidan vilken gjorde att bilden blev mindre*/
 }
-
-
 
 .mailto-box {
   border: green;
@@ -227,8 +223,6 @@ li a:hover {
 
 /* ===== Kontakt======*/
 
-
-
 /* ===== Om oss ====== */
 
 .bryt {
@@ -260,8 +254,6 @@ footer {
   height: auto;
 }
 
-
-
 .divider-wrapper {
   display: flex; /*För att få den vertikal*/
   align-items: center; /*Positionering i mitten*/
@@ -288,8 +280,6 @@ footer {
   background-color: #00000087;
   padding: 4px;
 }
-
-
 
 .form-field {
   display: flex;
@@ -318,13 +308,7 @@ footer {
   margin-top: 10px;
 }
 
-
-
-
-
 @media all and (max-width: 800px) {
-
-
   /* Menyns utgångsläge är display:none, alltså osynlig och skall inte visas förens menylänken (<a class="mobile-menu-link"> får "focus-within". Alltså när användaren klickar på länken i mobilläge. */
 
   .mobile-menu ul.mobile-menu-links {
@@ -344,7 +328,7 @@ footer {
   .mobile-menu {
     display: flex;
   }
- 
+
   .mobile-menu-links {
     border: 1px solid black;
     position: fixed;
@@ -358,7 +342,7 @@ footer {
     width: 50%;
     z-index: -1;
   }
-  
+
   .mobile-menu-links li {
     margin: 10px 0;
   }
@@ -372,13 +356,11 @@ footer {
   }
 
   .mobile-menu a:focus-within + ul {
-   opacity: 1;
-   visibility: visible;
-   z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
   }
 
-  
-  
   h1 {
     font-size: 26px;
   }
@@ -397,11 +379,8 @@ footer {
     flex-direction: column;
   }
   .flex-row {
-    flex-direction: column ;
+    flex-direction: column;
   }
 }
 
 /* Slut på css för mobil */
-
-
-

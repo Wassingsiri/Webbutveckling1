@@ -2,46 +2,66 @@
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
+    <!--Bra för responsiviteten. Koden talar om att skärmbredden på enheten ska användas och att sidan inte ska zoomas 
+      vilket underlättar vid användning av en mobiltelefon. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styleprojekt.css" />
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Trädgårdstjänster | Boka idag!</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
+        <!--Den här klassen används för att slyta med flexbox-->
         <div class="align-center flex-2">
           <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
           <p class="logo-title">
             <a href="./indexprojekt.html">Din gröna oas</a>
           </p>
         </div>
-        <div class="align-center flex-1">
-          <ul class="menu">
-            <li><a href="./indexprojekt.html">Hem</a></li>
-            <div class="dropdown">
+        <div class="align-center flex-1 menu-wrapper">
+          <!-- MOBILMENYN -->
+          <div class="mobile-menu">
+            <label for="test" class="mobile-menu-link" href="#">Meny</label>
+            <ul tabindex="0" id="test" class="mobile-menu-links">
+              <li><a href="./indexprojekt.html">Hem</a></li>
               <li>
-                <a href="./tjänster.html">Tjänster</a>
-                <ul class="dropdown-content">
+                <a href="">Tjänster</a>
+                <ul>
                   <li><a href="./rådgivning.html">Rådgivning</a></li>
                   <li><a href="./beskärning.html">Beskärning</a></li>
                   <li><a href="./skötsel.html">Skötsel</a></li>
                   <li><a href="./paket.html">Våra paket</a></li>
                 </ul>
               </li>
-            </div>
+              <li><a href="./omoss.html">Om oss</a></li>
+              <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <!-- MOBILMENYN SLUT -->
+          <!-- DESKTOPMENYN -->
+          <ul class="desktop-menu">
+            <li><a href="./indexprojekt.html">Hem</a></li>
+            <li class="dropdown">
+              <a href="">Tjänster</a>
+              <ul class="dropdown-content">
+                <li><a href="./rådgivning.html">Rådgivning</a></li>
+                <li><a href="./beskärning.html">Beskärning</a></li>
+                <li><a href="./skötsel.html">Skötsel</a></li>
+                <li><a href="./paket.html">Våra paket</a></li>
+              </ul>
+            </li>
             <li><a href="./omoss.html">Om oss</a></li>
             <li><a href="./kontakt.html">Kontakt</a></li>
           </ul>
+          <!-- DESKTOPMENYN SLUT -->
         </div>
       </nav>
-      
     </header>
-    
-        <div class="slogan">
-            <h1>Om oss</h1>
-          </div>
 
+    <div class="slogan">
+      <h1>Om oss</h1>
+    </div>
 
     <main>
       <div class="flex-row">
@@ -52,7 +72,7 @@
             amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis quam
             eget feugiat. Integer tincidunt dolor molestie lacus varius
             eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
-            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque. 
+            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque.
           </p>
           <hr class="bryt" />
           <p>
@@ -60,7 +80,7 @@
             amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis quam
             eget feugiat. Integer tincidunt dolor molestie lacus varius
             eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
-            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque. 
+            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque.
           </p>
           <hr class="bryt" />
           <p>
@@ -68,36 +88,34 @@
             amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis quam
             eget feugiat. Integer tincidunt dolor molestie lacus varius
             eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
-            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque.  
+            tristique. Quisque nec venenatis neque. Quisque nec venenatis neque.
           </p>
         </div>
         <div class="divider-wrapper"><hr class="divider" /></div>
         <div class="right">
-            <div class="container">
-                <h2>Hur blev vi Din gröna oas?</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sit
-                    amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis quam
-                    eget feugiat. Integer tincidunt dolor molestie lacus varius
-                    eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant morbi
-                    tristique. Quisque nec venenatis neque. Class aptent taciti sociosqu
-                    ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    Integer tellus mauris, finibus id metus ut, commodo finibus justo.
-                  </p>
-                  <div class="margin-top-md"> <!--För att få luft till texten ovan-->
+          <div class="container">
+            <h2>Hur blev vi Din gröna oas?</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              sit amet auctor ipsum, eu sollicitudin dui. Morbi pulvinar mattis
+              quam eget feugiat. Integer tincidunt dolor molestie lacus varius
+              eleifend. Vestibulum eu hendrerit erat. Pellentesque habitant
+              morbi tristique. Quisque nec venenatis neque. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos. Integer tellus mauris, finibus id metus ut, commodo
+              finibus justo.
+            </p>
+            <div class="margin-top-md">
+              <!--För att få luft till texten ovan-->
 
-              
-                <img
-                  class="img-fluid"
-                  src="./bilder/pexels-rachel-xiao-772429.jpg"
-                  alt=""
-                />
-              </div>
-                
-              
-           </div>
+              <img
+                class="img-fluid"
+                src="./bilder/pexels-fauxels-3183150.jpg"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-
       </div>
     </main>
     <footer>
