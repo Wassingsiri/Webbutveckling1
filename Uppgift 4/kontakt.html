@@ -1,11 +1,66 @@
-/Users/macbook/Documents/Webbutveckling1/Uppgift 4/omoss.html
-
-
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Bra för responsiviteten. Koden talar om att skärmbredden på enheten ska användas och att sidan inte ska zoomas 
+      vilket underlättar vid användning av en mobiltelefon. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleprojekt.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Trädgårdstjänster | Boka idag!</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!--Den här klassen används för att slyta med flexbox-->
+        <div class="align-center flex-2">
+          <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
+          <p class="logo-title">
+            <a href="./indexprojekt.html">Din gröna oas</a>
+          </p>
+        </div>
+        <div class="align-center flex-1 menu-wrapper">
+          <!-- MOBILMENYN -->
+          <div class="mobile-menu">
+            <label for="test" class="mobile-menu-link" href="#">Meny</label>
+            <ul tabindex="0" id="test" class="mobile-menu-links">
+              <li><a href="./indexprojekt.html">Hem</a></li>
+              <li>
+                <a href="">Tjänster</a>
+                <ul>
+                  <li><a href="./rådgivning.html">Rådgivning</a></li>
+                  <li><a href="./beskärning.html">Beskärning</a></li>
+                  <li><a href="./skötsel.html">Skötsel</a></li>
+                  <li><a href="./paket.html">Våra paket</a></li>
+                </ul>
+              </li>
+              <li><a href="./omoss.html">Om oss</a></li>
+              <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <!-- MOBILMENYN SLUT -->
+          <!-- DESKTOPMENYN -->
+          <ul class="desktop-menu">
+            <li><a href="./indexprojekt.html">Hem</a></li>
+            <li class="dropdown">
+              <a href="./tjänster.html">Tjänster</a>
+              <ul class="dropdown-content">
+                <li><a href="./rådgivning.html">Rådgivning</a></li>
+                <li><a href="./beskärning.html">Beskärning</a></li>
+                <li><a href="./skötsel.html">Skötsel</a></li>
+                <li><a href="./paket.html">Våra paket</a></li>
+              </ul>
+            </li>
+            <li><a href="./omoss.html">Om oss</a></li>
+            <li><a href="./kontakt.html">Kontakt</a></li>
+          </ul>
+          <!-- DESKTOPMENYN SLUT -->
+        </div>
+      </nav>
+    </header>
     <div class="slogan">
       <h1>Kontakt</h1>
     </div>
-
-
     <main>
       <div class="flex-row">
         <div class="left">
@@ -22,72 +77,64 @@
         <div class="divider-wrapper"><hr class="divider" /></div>
         <div class="right">
           <!--Här ska det vara ett fromulär-->
-          <!-- Ska jag lägga till action?-->
+          <!-- Här har jag laggt # för att komma tillbaka till samma sida då furmuläret inte kan skickas för den här uppgiften. -->
           <form action="#" method="POST">
             <div class="form-header">
               <h2>Nedan kan du skicka en förfrågan</h2>
             </div>
             <div class="form-field">
               <label for="namn">Namn:</label>
-              <input
-                type="text"
-                id="namn"
-                name="namn"
-                required
-                autofocus
-              />
+              <!--required använder jag då jag vill att första inputen ska få en blå kant runt sig så användaren vet vart den ska börja.-->
+              <input type="text" id="namn" name="namn" required autofocus />
             </div>
             <div class="form-field">
               <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
               <label for="telefon">Mobil:</label>
-              <input
-                type="tel"
-                id="telefon"
-                name="telefon"
-                required
-              />
+              <input type="tel" id="telefon" name="telefon" required />
             </div>
             <div class="form-field">
               <!--Alla label samt legend har fått samma klass då de ska se likadana ut-->
               <label for="telefon">Mail:</label>
 
-              <input
-                type="mail"
-                id="mail"
-                name="mail"
-                required
-              />
+              <input type="mail" id="mail" name="mail" required />
             </div>
 
             <div class="form-field">
-              <label  for="beskrivning">Meddelande:</label>
+              <label for="beskrivning">Meddelande:</label>
+              <!--rows="5" för att göra textfältet lite större-->
               <textarea
-                rows="6"
+                rows="5"
                 id="beskrivning"
                 name="beskrivning"
                 required
               ></textarea>
             </div>
-              <div class="form-field checkbox">
-                <input required type="checkbox" id="gdpr" name="gdpr">
-                <label for="gdpr">Härmed samtycker jag till att mina personuppgifter behandlas
-                  enligt integritetspolicyn</label>
-              </div>
+            <div class="form-field checkbox">
+              <input required type="checkbox" id="gdpr" name="gdpr" />
+              <!--För att följa GDPR lgen-->
+              <label for="gdpr"
+                >Härmed samtycker jag till att mina personuppgifter behandlas
+                enligt integritetspolicyn</label
+              >
+            </div>
             <div>
-              <input class="submit-button" type="submit" name="skicka" value="Skicka" />
+              <input
+                class="submit-button"
+                type="submit"
+                name="skicka"
+                value="Skicka"
+              />
             </div>
             <br />
             <!--Följa GDPR lagen-->
-            <p>
-              
-            </p>
+            <p></p>
           </form>
         </div>
       </div>
     </main>
     <footer>
       <div class="footer">
-        <h3>Kontaktuppgifter</h3>
+        <h3 class="margin-top-xs">Kontaktuppgifter</h3>
         <p>
           Adress:Lorem ipsum dolor sit amet<br />
           Telefon: Lorem ipsum dolor sit amet<br />

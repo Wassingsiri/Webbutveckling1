@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
-/* ===== För responsivitet ==== */
-
 /* || Gäller för hela sidan || */
 
 html {
@@ -30,7 +28,7 @@ body {
 }
 
 main {
-  margin: 0 100px; /*För att få in all content, skapa mer luft*/
+  margin: 0 50px; /*För att få in all content, skapa mer luft*/
 }
 
 input,
@@ -52,7 +50,10 @@ h1 {
 h2 {
   font-size: 30px;
 }
-
+h3 {
+  font-size: 20px;
+}
+/*Nedan har jag även lagt till textarea då webbläsarna har olika standarder. */
 p,
 input,
 textarea {
@@ -143,7 +144,7 @@ li a:hover {
   som på första sidan vilken gjorde att bilden blev mindre*/
 }
 
-.mailto-box {
+.kontakt-box {
   border: green;
   background-color: rgb(186, 207, 154);
   width: 100px;
@@ -154,7 +155,7 @@ li a:hover {
   margin: 40px auto;
 }
 
-.mailto-box > a {
+.kontakt-box > a {
   text-decoration: none;
   color: black;
 }
@@ -183,7 +184,7 @@ li a:hover {
 
 .card-4 {
   flex-basis: 20%; /* 20% av containern/föräldern. */
-  padding: 20px; /* Skapa luft emellan boxarna */
+  padding: 0px 0px 20px 0px; /* Skapa luft i botten */
 }
 
 .card-content {
@@ -196,7 +197,7 @@ li a:hover {
 
 /* ===== SIDA 3,3,5 och 6 ======  */
 
-.right .flex-row .mailto-box {
+.right .flex-row .kontakt-box {
   margin: 30px; /*Luft mellan box och text*/
 }
 .left {
@@ -211,7 +212,7 @@ li a:hover {
 .container {
   display: flex;
   flex-wrap: wrap; /*För att få bilderna 2+2*/
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .col2 {
@@ -308,59 +309,15 @@ footer {
   margin-top: 10px;
 }
 
+/* ===== För responsivitet ==== */
+
+/*   Jag har börjat koda för en mer responsiv hemsida
+      men har inte helt hunnit med det på grund av min pappas plötsliga bortgång. */
+
 @media all and (max-width: 800px) {
-  /* Menyns utgångsläge är display:none, alltså osynlig och skall inte visas förens menylänken (<a class="mobile-menu-link"> får "focus-within". Alltså när användaren klickar på länken i mobilläge. */
-
-  .mobile-menu ul.mobile-menu-links {
-    opacity: 0;
-    visibility: hidden;
-  }
-
   .logo-title {
     font-size: 20px;
   }
-  .menu-wrapper {
-    justify-content: flex-end;
-  }
-  .desktop-menu {
-    display: none;
-  }
-  .mobile-menu {
-    display: flex;
-  }
-
-  .mobile-menu-links {
-    border: 1px solid black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 40px;
-    width: 50%;
-    z-index: -1;
-  }
-
-  .mobile-menu-links li {
-    margin: 10px 0;
-  }
-
-  .mobile-menu-links li a {
-    text-decoration: none;
-  }
-
-  .mobile-menu-links li ul li {
-    margin-left: 10px;
-  }
-
-  .mobile-menu a:focus-within + ul {
-    opacity: 1;
-    visibility: visible;
-    z-index: 1;
-  }
-
   h1 {
     font-size: 26px;
   }
@@ -382,5 +339,3 @@ footer {
     flex-direction: column;
   }
 }
-
-/* Slut på css för mobil */
