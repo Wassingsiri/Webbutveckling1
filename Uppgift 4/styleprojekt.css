@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
-/* || Gäller för hela sidan || */
+/* ======  || Gäller för hela sidan || ====== */
 
 html {
   /*För att alla element i dokumentet ska inkludera padding och border i sin totala width och height.
@@ -23,10 +23,6 @@ body {
   font-family: "Roboto", "Open Sans", "Helvetica Neue", sans-serif; /*Gäller för alla text förrutom <p>*/
 }
 
-.mobile-menu {
-  display: none;
-}
-
 main {
   margin: 0 50px; /*För att få in all content, skapa mer luft*/
 }
@@ -43,15 +39,16 @@ h3 {
 
   margin-bottom: 10px; /*Skapa luft mellan rubrik och text */
 }
-
+/*rem äkar tillgängligheten då enheten 
+  anpassar sig efter vilken textstorlek som användaren har valt i sin webbläsare.*/
 h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 /*Nedan har jag även lagt till textarea då webbläsarna har olika standarder. */
 p,
@@ -62,10 +59,10 @@ textarea {
 }
 
 ul {
-  list-style: none;
+  list-style: none; /*Tar bort prickar*/
 }
 
-/* || =======   Header och Navigation ======= ||*/
+/* || =======  Header och Navigation ======= ||*/
 
 nav.navbar {
   display: flex; /* Container för hela menyn*/
@@ -73,16 +70,15 @@ nav.navbar {
   justify-content: space-between; /* Mellanrum i menyn*/
   height: 100px; /* Höjden på headern */
   align-items: center; /* För att få alla rubriker på samma rad */
-  padding: 0 1.875em; /* 30px padding till höger och vänster, em äkar tillgängligheten då enheten 
-  anpassar sig efter vilken textstorlek som snvändaren har valt i sin webbläsare. */
+  padding: 0 30px; /* 30px padding till höger och vänster. */
 }
 
 .logo-title {
-  font-size: 50px; /*Gör om till rem pga TILLGÄNGLIGHET*/
-  font-family: "Charmonman", cursive;
+  font-size: 3.125rem;
+  font-family: "Charmonman", cursive, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .logo-title > a {
-  text-decoration: none;
+  text-decoration: none; /*Tar bort understräcket som hamnar automatisk då det är en länk*/
   color: black;
 }
 
@@ -99,7 +95,7 @@ nav.navbar {
 }
 .desktop-menu a {
   text-decoration: none; /* Tar bort understräck*/
-  color: rgb(0, 0, 0); /* */
+  color: rgb(0, 0, 0);
 }
 
 .align-center {
@@ -114,6 +110,7 @@ nav.navbar {
   flex: 1; /*Tar upp 1/3*/
 }
 
+/*Rullgardinsmeny*/
 .dropdown-content {
   background-color: #f4dada;
   position: absolute; /*lägger sig på, framför skiter i det innan, bra för responsivitet*/
@@ -130,7 +127,7 @@ li a:hover {
   text-decoration: underline; /* Skapar linje under vald rubrik*/
 }
 
-/* ========  Gäller för alla sidor  - Bakgrundsbild, rubrik och mailbox ======= */
+/* ========  Bakgrundsbild, rubrik och kontaktbox ======= */
 
 .slogan {
   background-image: url(./bilder/pexels-adrianna-calvo-1086177.jpg);
@@ -144,8 +141,9 @@ li a:hover {
   som på första sidan vilken gjorde att bilden blev mindre*/
 }
 
+/*Box som länkar till formuläret. Återfinns på flera sidor.*/
 .kontakt-box {
-  border: green;
+  border: rgb(61, 155, 61);
   background-color: rgb(186, 207, 154);
   width: 100px;
   height: 40px;
@@ -156,21 +154,55 @@ li a:hover {
 }
 
 .kontakt-box > a {
-  text-decoration: none;
+  text-decoration: none; /*Tar bort default understräck*/
   color: black;
 }
 
-/* Används för att centrera ensamma element, tex knappar */
+/* ======= || FLEXBOX, återänvänds || ======*/
+
+/* Används för att få content bredvid varandra. */
 .flex-row {
   display: flex;
   justify-content: center; /*positionerar knapp med flex box */
 }
 
-/* ======= GÄLLER FÖR ALLA SIDOR  Main content =======  */
+/* Används för att få content bredvid varandra. */
 
 .flex-container {
   display: flex; /*För att få dem bredvid varandra*/
-  justify-content: space-around; /*Vänster justering VADÅ VÄNSTER?!*/
+  justify-content: space-around; /*För att få luft emellan content*/
+}
+
+.right .flex-row .kontakt-box {
+  margin: 30px; /*Luft mellan box och text*/
+}
+
+/*Tar upp hälfen av föräldren som är flex-row */
+.left {
+  flex: 1;
+  padding: 50px;
+}
+/*Tar upp hälfen av föräldren som är flex-row */
+.right {
+  flex: 1;
+  padding: 50px;
+}
+
+.container {
+  display: flex; /*För att bilderna ska bredvid varandra*/
+  flex-wrap: wrap; /*För att få bilderna 2+2*/
+}
+
+.col2 {
+  display: flex;
+  flex-basis: 50%; /*Tar upp hälften av föräldern som är container*/
+
+  padding: 10px; /*Luft emellan bilderna*/
+}
+
+.divider-wrapper {
+  display: flex; /*För att få den vertikal*/
+  align-items: center; /*Positionering i mitten*/
 }
 
 /* ====== SIDA 1, HEM /indexprojekt====== */
@@ -178,6 +210,12 @@ li a:hover {
 .card-3 {
   flex-basis: 30%; /* 30% av containern/föräldern. */
   padding: 20px; /* Skapa luft emellan boxarna */
+}
+
+/*Enbart till första sidan då där är llängr text som går över rosen vilket leder till dålig kontrast*/
+.opacity {
+  background-color: #00000087;
+  padding: 4px;
 }
 
 /* ===== SIDA 2, Tjänster ======*/
@@ -192,37 +230,39 @@ li a:hover {
 }
 
 .card {
-  background-color: #dbe9b7;
-}
-
-/* ===== SIDA 3,3,5 och 6 ======  */
-
-.right .flex-row .kontakt-box {
-  margin: 30px; /*Luft mellan box och text*/
-}
-.left {
-  flex: 1;
-  padding: 50px;
-}
-.right {
-  flex: 1;
-  padding: 50px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap; /*För att få bilderna 2+2*/
-  margin-bottom: 0px;
-}
-
-.col2 {
-  display: flex;
-  flex-basis: 50%;
-
-  padding: 10px;
+  background-color: #e3eec9;
 }
 
 /* ===== Kontakt======*/
+
+/*Gäller alla element i formuläret*/
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0; /*Bara margin ovan och under*/
+}
+
+.form-field input {
+  height: 40px; /*Storlek på fältet*/
+}
+
+.form-field.checkbox {
+  flex-direction: row; /*För att få boxen bredvid texten*/
+}
+
+/*För att justera labeln bara för checkbox*/
+.form-field.checkbox label {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.submit-button {
+  padding: 10px 40px;
+  background-color: rgb(162, 216, 162);
+  border-radius: 4px; /*Rundade hörn*/
+  border: none;
+  margin-top: 10px;
+}
 
 /* ===== Om oss ====== */
 
@@ -244,26 +284,23 @@ footer {
   margin-bottom: 0;
   align-items: center;
   margin-left: 30px;
-  justify-content: center; /*positionerar text med flex box */
   font-size: 0.8em; /*Lite mindre storlek än övrigt på sidan*/
 }
 
-/* ===== Dessa återanvänds på flera sidor ===== */
+/* ===== ÅTERANVÄNDS  ===== */
 
+/*img-fluid Kan användas till alla bilder då width och height anpassar sig till sin föräldrar.*/
 .img-fluid {
   width: 100%;
   height: auto;
 }
 
-.divider-wrapper {
-  display: flex; /*För att få den vertikal*/
-  align-items: center; /*Positionering i mitten*/
-}
-
 .divider {
-  height: 80%;
+  height: 80%; /*För att den inte ska täcka hela main content*/
 }
 
+/*Dessa klasser kan återanvändas där det behövs lite extra marginal.
+Bra om man använder sig av flex box då marginal helst inte ska landas in i samma klass.*/
 .margin-top-lg {
   margin-top: 40px;
 }
@@ -274,38 +311,6 @@ footer {
   margin-top: 20px;
 }
 .margin-top-xs {
-  margin-top: 10px;
-}
-
-.opacity {
-  background-color: #00000087;
-  padding: 4px;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0;
-}
-
-.form-field input {
-  height: 40px;
-}
-
-.form-field.checkbox {
-  flex-direction: row;
-}
-
-.form-field.checkbox label {
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.submit-button {
-  padding: 10px 40px;
-  background-color: lightseagreen;
-  border-radius: 4px;
-  border: none;
   margin-top: 10px;
 }
 

@@ -5,45 +5,38 @@
     <!--Bra för responsiviteten. Koden talar om att skärmbredden på enheten ska användas och att sidan inte ska zoomas 
       vilket underlättar vid användning av en mobiltelefon. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Länk till extern css fil-->
     <link rel="stylesheet" href="styleprojekt.css" />
+    <!--länk till de importerade länkarna-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <title>Trädgårdstjänster | Boka idag!</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <!--Den här klassen används för att slyta med flexbox-->
+        <!--Den här klassen används för att styla med flexbox-->
         <div class="align-center flex-2">
-          <img class="icon-slogan" src="./bilder/tree-icon-1527.png" />
+          <!--Jag valde att lägga en passande logga här och ha Din gröna i oas istället för grön som jag skrivit i min storyboard.-->
+          <img
+            class="icon-slogan"
+            src="./bilder/tree-icon-1527.png"
+            alt="Träd"
+          />
+          <!--Klassen logo-title används för att förstora Din gröna oas-->
           <p class="logo-title">
+            <!--Trycker man på loggan så kommer man till huvudsidan. -->
             <a href="./indexprojekt.html">Din gröna oas</a>
           </p>
         </div>
         <div class="align-center flex-1 menu-wrapper">
-          <!-- MOBILMENYN -->
-          <div class="mobile-menu">
-            <label for="test" class="mobile-menu-link" href="#">Meny</label>
-            <ul tabindex="0" id="test" class="mobile-menu-links">
-              <li><a href="./indexprojekt.html">Hem</a></li>
-              <li>
-                <a href="">Tjänster</a>
-                <ul>
-                  <li><a href="./rådgivning.html">Rådgivning</a></li>
-                  <li><a href="./beskärning.html">Beskärning</a></li>
-                  <li><a href="./skötsel.html">Skötsel</a></li>
-                  <li><a href="./paket.html">Våra paket</a></li>
-                </ul>
-              </li>
-              <li><a href="./omoss.html">Om oss</a></li>
-              <li><a href="./kontakt.html">Kontakt</a></li>
-            </ul>
-          </div>
-          <!-- MOBILMENYN SLUT -->
+          <!--Jag har börjat koda för en mer responsiv hemsida men har inte hunnit med det 
+            på grund av min pappas plötsliga bortgång. Därför ligger kommentaren kvar nedan. -->
           <!-- DESKTOPMENYN -->
           <ul class="desktop-menu">
             <li><a href="./indexprojekt.html">Hem</a></li>
             <li class="dropdown">
               <a href="./tjänster.html">Tjänster</a>
+              <!--Rullgardinsmeny-->
               <ul class="dropdown-content">
                 <li><a href="./rådgivning.html">Rådgivning</a></li>
                 <li><a href="./beskärning.html">Beskärning</a></li>
@@ -58,10 +51,12 @@
         </div>
       </nav>
     </header>
+    <!--Klassen används för att redigera styling samt lägga till en bakgrundsbild i css-->
     <div class="slogan">
       <h1>Skötsel</h1>
     </div>
     <main>
+      <!--Styling med flex box, klasserna återanvänds på flera sidor-->
       <div class="flex-row">
         <div class="left">
           <div class="container">
@@ -95,6 +90,7 @@
             </div>
           </div>
         </div>
+        <!--Delar av -->
         <div class="divider-wrapper"><hr class="divider" /></div>
         <div class="right">
           <h2>Lorem ipsum dolor sit amet</h2>
@@ -109,7 +105,7 @@
           </p>
           <div class="flex-row">
             <div class="kontakt-box">
-              <!--Här blir man länkar till ett formulär på kontakt sidan. -->
+              <!--Här blir man länkad till ett formulär på kontakt sidan. -->
               <a href="./kontakt.html">Boka idag</a>
             </div>
           </div>
