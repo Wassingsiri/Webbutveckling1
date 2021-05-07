@@ -320,6 +320,7 @@ Bra om man använder sig av flex box då marginal helst inte ska landas in i sam
       men har inte helt hunnit med det på grund av min pappas plötsliga bortgång. */
 
 @media all and (max-width: 800px) {
+  /*Så att de inte tar upp för mycket av skärmen på en mobil. */
   .logo-title {
     font-size: 20px;
   }
@@ -329,10 +330,13 @@ Bra om man använder sig av flex box då marginal helst inte ska landas in i sam
   h2 {
     font-size: 20px;
   }
-
+  /*Extra marginalen här behövs inte i en telefon*/
   main {
-    margin: 0;
+    margin: 10px;
   }
+
+  /*För att det ska få plats på en mobil. 
+  Blir lättare att använda om det ligger i column*/
   .flex-container {
     flex-direction: column;
   }
@@ -341,6 +345,9 @@ Bra om man använder sig av flex box då marginal helst inte ska landas in i sam
     flex-direction: column;
   }
   .flex-row {
+    flex-direction: column;
+  }
+  .desktop-menu {
     flex-direction: column;
   }
 }
